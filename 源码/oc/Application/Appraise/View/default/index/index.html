@@ -1,0 +1,50 @@
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-family: "宋体";
+	font-weight: bold;
+}
+-->
+</style>
+<extend name="Base/common"/>
+<block name="body">
+	<div class="col-xs-12">
+		<style type="text/css">
+		h1
+		{
+			font-size:24px;
+			color:#000000;
+			text-align:center;
+		}
+		</style>
+      <h1><strong>教师目录</strong></h1>
+      <table width="400%" border="2">
+		  <tr>
+			<td>姓名</td>
+			<td>分数</td>
+			<td>操作</td>
+		  </tr>
+		  <volist name="teachers" id="vo">
+			  <tr>
+				<td><a href="{:U('showAppraise',array('uid'=>$vo['uid']))}">{$vo.nickname}</a></td>
+				<td>&nbsp;</td>
+				<td>
+				<a href="{:U('selectLesson',array('uid'=>$vo['uid']))}">
+					Select
+				</a>
+				</td>
+			  </tr>
+		  </volist>
+	  </table>
+  </div>
+</block>
+
+
+
+
+
+
+
+
+
+

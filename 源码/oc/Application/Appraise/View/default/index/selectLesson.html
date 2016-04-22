@@ -1,0 +1,48 @@
+<style type="text/css">
+<!--
+.STYLE1 {
+	font-family: "宋体";
+	font-weight: bold;
+}
+-->
+</style>
+<extend name="Base/common"/>
+<block name="body">
+	<div class="col-xs-12">
+		<style type="text/css">
+		h1
+		{
+			font-size:24px;
+			color:#000000;
+			text-align:center;
+		}
+		</style>
+      <h1>课程目录</h1>
+      <table width="400%" border="1">
+		  <tr>
+			<td>课程名称</td>
+			<td>&nbsp;</td>
+		  </tr>
+		  <volist name="lessons" id="vo">
+			  <tr>
+				<td>{$vo.title}</td>
+				<td>
+				<a href="{:U('selectSession',array('lessonId'=>$vo['id'],'uid'=>$uid))}">
+					Select
+				</a>
+				</td>
+			  </tr>
+		  </volist>
+	  </table>
+  </div>
+</block>
+
+
+
+
+
+
+
+
+
+
